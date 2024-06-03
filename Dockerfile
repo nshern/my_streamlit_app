@@ -2,9 +2,9 @@ FROM python:3.12-bookworm
 
 WORKDIR /app
 
-RUN git clone https://github.com/nshern/my_streamlit_app .
+COPY . .
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt --no-cache-dir
 
 EXPOSE 8501
 
